@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grabador de Pantalla</title>
+    <style>
+      body {
+        text-align: center; /* Centra el contenido del body */
+        padding-top: 50px; /* Espacio en la parte superior */
+        background: rgb(192 192 192);   
+      }
+      .container {
+        display: inline-block; /* Hace que el contenedor se ajuste al tamaño de su contenido */
+        text-align: left; /* Alinea los botones a la izquierda dentro del contenedor centrado */
+      }
+      img.logo {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px;
+        width: 100px;
+        border-radius: 100px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://lh3.googleusercontent.com/a/ACg8ocJjsdIrm44R3Cq2BmxPfP0zB9XRQ3xCqXX_fXvlsAyE4v0G=s260-c-no"
+      alt="Logo"
+      class="logo"
+    />
+    <div class="container">
+      <button id="startButton">Iniciar Grabación</button>
+      <button id="pauseResumeButton" disabled>Pausar/Reanudar</button>
+      <button id="stopButton" disabled>Detener y Descargar</button>
+    </div>
+
+    <script>
+      let mediaRecorder;
+      let recordedBlobs;
+      const startButton = document.getElementById("startButton");
+      const pauseResumeButton = document.getElementById("pauseResumeButton");
+      const stopButton = document.getElementById("stopButton");
+
+      startButton.addEventListener("click", () => {
+        navigator.mediaDevices
+          .getDisplayMedia({ video: true })
+          .then((stream) => {
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.ondataavailable = handleDataAvailable;
+            mediaRecorder.onstop = handleStop;
+            mediaRecorder.start();
+            startButton.disabled = true;
+            pauseResumeButton.disabled = false;
+            stopButton.disabled = false;
+          })
+          .catch(console.error);
+      });
+
+      pauseResumeButton.addEventListener("click", () => {
+        if (mediaRecorder.state === "recording") {
+          mediaRecorder.pause();
+          pauseResumeButton.textContent = "Reanudar";
+        } else {
+          mediaRecorder.resume();
+          pauseResumeButton.textContent = "Pausar";
+        }
+      });
+
+      stopButton.addEventListener("click", () => {
+        mediaRecorder.stop();
+        startButton.disabled = false;
+        pauseResumeButton.disabled = true;
+        stopButton.disabled = true;
+        pauseResumeButton.textContent = "Pausar/Reanudar";
+      });
+
+      function handleDataAvailable(event) {
+        if (!recordedBlobs) {
+          recordedBlobs = [];
+        }
+        recordedBlobs.push(event.data);
+      }
+
+      function handleStop(event) {
+        const superBuffer = new Blob(recordedBlobs, { type: "video/webm" });
+        const url = window.URL.createObjectURL(superBuffer);
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = url;
+        a.download = "grabacion.webm";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+        }, 100);
+      }
+    </script>
+  </body>
+</html>

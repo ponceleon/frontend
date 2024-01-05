@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documento de Ejemplo con Varias Etiquetas HTML</title>
+    <style>
+      /* Estilos internos para demostración */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header,
+      nav,
+      section,
+      article,
+      aside,
+      footer {
+        border: 1px solid #333;
+        margin: 10px;
+        padding: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 5px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Título Principal con <small>Texto Pequeño</small></h1>
+      <p><strong>Enfatizado</strong> y <em>Italicizado</em></p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#" target="_blank">Inicio</a></li>
+        <li><a href="#" target="_blank">Acerca de</a></li>
+        <li><a href="#" target="_blank">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+        <h2>Artículo en Main</h2>
+        <p>Contenido principal de la página.</p>
+      </article>
+    </main>
+
+    <section>
+      <h1>Encabezado Principal</h1>
+      <h2>Subencabezado</h2>
+      <h3>Sub-subencabezado</h3>
+      <h4>Encabezado Nivel 4</h4>
+      <h5>Encabezado Nivel 5</h5>
+      <h6>Encabezado Nivel 6</h6>
+
+      <table>
+        <tr>
+          <td>Celda 1</td>
+          <td>Celda 2</td>
+        </tr>
+        <tr>
+          <td>Celda 3</td>
+          <td>Celda 4</td>
+        </tr>
+      </table>
+
+      <div>
+        <p>Este es un párrafo dentro de un div.</p>
+      </div>
+
+      <ol>
+        <li>Primer elemento de la lista ordenada</li>
+        <li>Segundo elemento</li>
+      </ol>
+      <ul>
+        <li>Elemento de lista desordenada</li>
+        <li>Otro elemento</li>
+      </ul>
+
+      <p><b>Negrita</b>, <i>Cursiva</i>, <s>Tachado</s> y <u>Subrayado</u>.</p>
+
+      <a
+        href="http://www.example.com"
+        title="Ejemplo"
+        target="_blank"
+        tabindex="1"
+        >Visitar Ejemplo</a
+      >
+
+      <p>
+        Este es un <span style="color: red">texto destacado</span> dentro de un
+        párrafo.
+      </p>
+
+      <p>Primera línea.<br />Segunda línea.</p>
+      
+      <p>Parrafo antes del cambio de tema.</p>
+      <hr />
+      <p>Parrafo después del cambio de tema.</p>
+
+      <article>
+        <h2>Título del Artículo</h2>
+        <p>
+          Este es un párrafo en el artículo. El contenido aquí es auto-contenido
+          y puede ser reutilizado.
+        </p>
+      </article>
+      <article>
+        <h2>Artículo 1 con <sub>Subíndice</sub> y <sup>Superíndice</sup></h2>
+        <p>
+          Este es un <mark>párrafo</mark> dentro del artículo 1. Aquí también
+          hay una imagen:
+        </p>
+        <img
+          src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp"
+          alt="Descripción de la imagen"
+          width="200"
+        />
+        <p>Texto preformateado:</p>
+        <pre>
+Código o texto
+        con espaciado
+        fijo</pre
+        >
+        <p>Cita en línea: <q>Esto es una cita</q> dentro de un párrafo.</p>
+        <blockquote>
+          Cita en bloque, usualmente de secciones externas o citas más largas.
+        </blockquote>
+        <p>Texto con <code>código</code> en línea.</p>
+        <figure>
+          <img
+            src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp"
+            alt="Otra imagen"
+            width="400"
+          />
+          <figcaption>Descripción de la imagen.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h2>Artículo 2</h2>
+        <p>Este es un párrafo dentro del artículo 2. Ejemplo de una lista:</p>
+        <ul>
+          <li>Elemento 1</li>
+          <li>Elemento 2 con <a href="#">enlace</a></li>
+          <li>Elemento 3</li>
+        </ul>
+        <ol>
+          <li>Primer elemento</li>
+          <li>Segundo elemento</li>
+        </ol>
+        <dl>
+          <dt>Termino 1</dt>
+          <dd>Definición 1</dd>
+          <dt>Termino 2</dt>
+          <dd>Definición 2</dd>
+        </dl>
+        <p>
+          Uso de <abbr title="Hypertext Markup Language">HTML</abbr> y
+          <acronym title="As Soon As Possible">ASAP</acronym>.
+        </p>
+        <address>
+          Contacto: <a href="mailto:ejemplo@correo.com">ejemplo@correo.com</a>
+        </address>
+        <p><time datetime="2024-01-02">2 de Enero de 2024</time></p>
+      </article>
+    </section>
+
+    <aside>
+      <h3>Barra lateral</h3>
+      <p><b>Negrita</b> e <i>Itálica</i> en la barra lateral.</p>
+      <p>Texto <del>eliminado</del> y <ins>insertado</ins></p>
+    </aside>
+
+    <footer>
+      <p>Derechos de autor © 2024</p>
+      <p><s>Texto tachado</s> y <u>subrayado</u>.</p>
+    </footer>
+
+    <table>
+      <caption>
+        Tabla de Ejemplo
+      </caption>
+      <thead>
+        <tr>
+          <th>Encabezado 1</th>
+          <th>Encabezado 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 2</td>
+        </tr>
+        <tr>
+          <td>Dato 3</td>
+          <td>Dato 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Pie 1</td>
+          <td>Pie 2</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <form action="#">
+      <fieldset>
+        <legend>Formulario de Ejemplo</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br />
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" /><br />
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpiar" />
+      </fieldset>
+    </form>
+
+    <details>
+      <summary>Más información sobre HTML</summary>
+      <p>
+        HTML (Lenguaje de Marcado de Hipertexto) es el lenguaje estándar para
+        documentos diseñados para ser mostrados en un navegador web.
+      </p>
+    </details>
+
+    <details>
+      <summary>Más información sobre CSS</summary>
+      <p>
+        CSS (Hojas de Estilo en Cascada) es un lenguaje de hoja de estilos
+        utilizado para describir la presentación de un documento escrito en HTML
+        o XML.
+      </p>
+    </details>
+
+    <script>
+      // Código JavaScript aquí
+    </script>
+  </body>
+</html>

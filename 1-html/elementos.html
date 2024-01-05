@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos de Etiquetas HTML</title>
+  </head>
+
+  <!-- Este código incluye ejemplos de uso para cada una de las etiquetas, y donde es aplicable, se ha incluido un comentario en caso de poseer obsolescencia. Recuerda que la obsolescencia de las etiquetas puede variar según las actualizaciones de los estándares de HTML, por lo que es importante mantenerse actualizado con las últimas prácticas recomendadas. -->
+
+  <body>
+    <!-- <abbr>: Define una abreviatura o acrónimo -->
+    <abbr title="Hypertext Markup Language">HTML</abbr>
+
+    <!-- <acronym>: Obsoleto desde HTML5, antes usada para acrónimos -->
+    <!-- Ejemplo: <acronym title="As Soon As Possible">ASAP</acronym> -->
+
+    <!-- <address>: Define la información de contacto del autor o propietario del documento -->
+    <address>
+      Contacta a: <a href="mailto:someone@example.com">someone@example.com</a>
+    </address>
+
+    <!-- <area>: Define un área dentro de un mapa de imagen -->
+    <img src="planeta.jpg" alt="Planeta" usemap="#planetamap" />
+    <map name="planetamap">
+      <area shape="rect" coords="34,44,270,350" alt="Sol" href="sol.html" />
+    </map>
+
+    <!-- <article>: Define contenido independiente -->
+    <article>
+      <h2>Artículo de Noticias</h2>
+      <p>Este es un artículo de ejemplo.</p>
+    </article>
+
+    <!-- <aside>: Define contenido aparte del contenido que lo rodea -->
+    <aside>
+      <p>Esta es una barra lateral.</p>
+    </aside>
+
+    <!-- <audio>: Usado para contenido de sonido -->
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- <b>: Define texto en negrita -->
+    <b>Texto en negrita</b>
+
+    <!-- <base>: Especifica la URL base para todas las URLs relativas en un documento -->
+    <head>
+      <base href="https://www.ejemplo.com/" />
+    </head>
+
+    <!-- <bdi>: Aísla una parte del texto para que pueda formatearse en una dirección de texto diferente -->
+    <p>Usuario <bdi>jd123</bdi>: 50 puntos</p>
+
+    <!-- <bdo>: Anula la dirección de texto actual -->
+    <bdo dir="rtl">Este texto estará al revés.</bdo>
+
+    <!-- <big>: Obsoleto desde HTML5, antes usada para texto grande -->
+    <!-- Ejemplo: <big>Texto grande</big> -->
+
+    <!-- <blockquote>: Define una sección que es citada desde otra fuente -->
+    <blockquote cite="http://www.ejemplo.com">Ejemplo de cita.</blockquote>
+
+    <!-- <body>: Define el cuerpo del documento -->
+    <body>
+      El contenido del documento.
+    </body>
+
+    <!-- <br>: Inserta un salto de línea -->
+    <p>Esto es un párrafo.<br />Otra línea.</p>
+
+    <!-- <button>: Define un botón clickeable -->
+    <button type="button">Clic me!</button>
+
+    <!-- <canvas>: Usado para gráficos dibujados vía scripting -->
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+
+    <!-- <caption>: Define el título de una tabla -->
+    <table>
+      <caption>
+        Título de la tabla
+      </caption>
+      <tr>
+        <th>Cabecera</th>
+      </tr>
+      <tr>
+        <td>Dato</td>
+      </tr>
+    </table>
+
+    <!-- <center>: Obsoleto desde HTML4.01, antes usado para centrar contenido -->
+    <!-- Ejemplo: <center>Contenido centrado</center> -->
+
+    <!-- <cite>: Define el título de una obra creativa -->
+    <cite>La Odisea</cite>
+
+    <!-- <code>: Define una pieza de código informático -->
+    <code>x = y + z;</code>
+
+    <!-- <col>: Especifica las propiedades de columna para cada columna dentro de <colgroup> -->
+    <table>
+      <colgroup>
+        <col style="background-color: yellow" />
+      </colgroup>
+      <tr>
+        <td>A</td>
+        <td>B</td>
+      </tr>
+    </table>
+
+    <!-- <colgroup>: Especifica un grupo de una o más columnas en una tabla para formatear -->
+    <table>
+      <colgroup>
+        <col span="2" style="background-color: yellow" />
+      </colgroup>
+      <tr>
+        <td>A</td>
+        <td>B</td>
+      </tr>
+    </table>
+
+    <!-- <data>: Asocia un valor legible por máquina con su contenido -->
+    <data value="21053">Producto #21053</data>
+
+    <!-- <datalist>: Especifica una lista de opciones predefinidas para elementos <input> -->
+    <input list="browsers" name="browser" />
+    <datalist id="browsers">
+      <option value="Chrome"></option>
+      <option value="Firefox"></option>
+    </datalist>
+
+    <!-- <dd>: Describe un término en una lista de descripción -->
+    <dl>
+      <dt>Café</dt>
+      <dd>Bebida caliente negra</dd>
+    </dl>
+
+    <!-- <del>: Define texto que ha sido eliminado de un documento -->
+    <del>Texto antiguo</del>
+
+    <!-- <details>: Define detalles adicionales que el usuario puede ver u ocultar -->
+    <details>
+      <summary>Más información</summary>
+      <p>Contenido detallado aquí.</p>
+    </details>
+
+    <!-- <dfn>: Define un término de definición -->
+    <p>
+      <dfn>HTML</dfn> es el lenguaje de marcado estándar para crear páginas web.
+    </p>
+
+    <!-- <dialog>: Define una caja de diálogo o ventana -->
+    <dialog open>Este es un diálogo abierto.</dialog>
+
+    <!-- <dir>: Obsoleto, antes usada para listas de directorios -->
+    <!-- Ejemplo: <dir><li>Item 1</li><li>Item 2</li></dir> -->
+
+    <!-- <div>: Define una sección en un documento -->
+    <div>Esta es una sección dividida.</div>
+
+    <!-- <dl>: Define una lista de definición -->
+    <dl>
+      <dt>Café</dt>
+      <dd>Bebida caliente negra</dd>
+    </dl>
+
+    <!-- <dt>: Define un término en una lista de definición -->
+    <dl>
+      <dt>Café</dt>
+      <dd>Bebida caliente negra</dd>
+    </dl>
+
+    <!-- <em>: Define énfasis en texto -->
+    <em>Texto enfatizado</em>
+
+    <!-- <embed>: Define un contenedor para una aplicación externa o contenido interactivo -->
+    <embed type="image/jpg" src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp" width="300" height="200" />
+
+    <!-- <fieldset>: Agrupa elementos relacionados en un formulario -->
+    <fieldset>
+      <legend>Información Personal</legend>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" />
+    </fieldset>
+
+    <!-- <figcaption>: Define una leyenda para un elemento <figure> -->
+    <figure>
+      <img src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp" alt="Foto del Mar" width="300"  />
+      <figcaption>Vista del Mar</figcaption>
+    </figure>
+
+    <!-- <figure>: Especifica contenido independiente, como ilustraciones, diagramas, fotos, código, etc. -->
+    <figure>
+      <img src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp" alt="Foto del Mar"  width="300"  />
+      <figcaption>Vista del Mar</figcaption>
+    </figure>
+
+    <!-- <font>: Obsoleto, antes usada para definir el tipo de letra, tamaño y color -->
+    <!-- Ejemplo: <font face="Arial" size="4" color="red">Texto</font> -->
+
+    <!-- <footer>: Define un pie de página para un documento o sección -->
+    <footer>
+      <p>Pie de página</p>
+    </footer>
+
+    <!-- <form>: Define un formulario HTML para entrada del usuario -->
+    <form action="/submit_form" method="post">
+      <input type="text" name="nombre" />  
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <!-- <frame>: Obsoleto, antes usado para definir un marco particular dentro de un <frameset> -->
+    <!-- Ejemplo: <frame src="frame_a.htm"> -->
+
+    <!-- <frameset>: Obsoleto, antes usado para definir un conjunto de marcos -->
+    <!-- Ejemplo: <frameset cols="25%,*,25%"><frame src="frame_a.htm"></frameset> -->
+
+    <!-- <h1>: Define un encabezado nivel 1 -->
+    <h1>Este es un encabezado</h1>
+
+    <!-- <head>: Contiene metadatos/información para el documento -->
+    <head>
+      <title>Título de la Página</title>
+    </head>
+
+    <!-- <header>: Define un encabezado para un documento o sección -->
+    <header>
+      <h1>Encabezado de la Página</h1>
+    </header>
+
+    <!-- <hgroup>: Obsoleto, agrupaba un conjunto de elementos <h1> a <h6> cuando un encabezado tiene sub-secciones -->
+    <!-- Ejemplo: <hgroup><h1>Título Principal</h1><h2>Subtítulo</h2></hgroup> -->
+
+    <!-- <hr>: Define un cambio temático en el contenido -->
+    <hr />
+
+    <!-- <html>: Define la raíz de un documento HTML -->
+    <html lang="en">
+      <!-- Contenido del documento HTML -->
+    </html>
+
+    <!-- <i>: Define una parte de texto en una voz o estado de ánimo alternativo -->
+    <i>Texto en cursiva</i>
+
+    <!-- <iframe>: Define un marco en línea -->
+    <iframe src="pagina.html"></iframe>
+
+    <!-- <image>: Non-standard, obsoleto, use <img> en su lugar -->
+    <!-- Ejemplo: <image src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp" alt="Una imagen"> -->
+
+    <!-- <img>: Define una imagen -->
+    <img src="https://ponceleon.site/images/LOGO_SQUARE_PONCELEON_SITE.webp" alt="Una imagen" />
+
+    <!-- <input>: Define un control de entrada -->
+    <input type="text" name="nombre" />
+
+    <!-- <ins>: Define un texto que ha sido insertado en un documento -->
+    <ins>Texto insertado</ins>
+
+    <!-- <kbd>: Define entrada de teclado -->
+    <p>Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar</p>
+
+    <!-- <label>: Define una etiqueta para un elemento <input> -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" />
+
+    <!-- <legend>: Define una leyenda para un elemento <fieldset> -->
+    <fieldset>
+      <legend>Información Personal</legend>
+      <input type="text" name="nombre" />
+    </fieldset>
+
+    <!-- <li>: Define un ítem de lista -->
+    <ul>
+      <li>Ítem de lista 1</li>
+      <li>Ítem de lista 2</li>
+    </ul>
+
+    <!-- <link>: Define la relación entre un documento y un recurso externo -->
+    <head>
+      <link rel="stylesheet" href="estilos.css" />
+    </head>
+
+    <!-- <main>: Define el contenido principal o importante en el documento -->
+    <main>
+      <p>Contenido principal de la página.</p>
+    </main>
+
+    <!-- <map>: Define un mapa de imagen -->
+    <img src="planeta.jpg" alt="Planeta" usemap="#planetamap" />
+    <map name="planetamap">
+      <area shape="rect" coords="34,44,270,350" alt="Sol" href="sol.html" />
+    </map>
+
+    <!-- <mark>: Define texto marcado o resaltado por motivos de referencia -->
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+    <!-- <marquee>: Obsoleto, antes usada para crear texto deslizante -->
+    <!-- Ejemplo: <marquee>Este es un texto deslizante</marquee> -->
+
+    <!-- <menu>: Define un menú de comandos -->
+    <menu type="toolbar">
+      <menuitem
+        label="Refresh"
+        onclick="window.location.reload();"
+        icon="refresh.ico"
+      ></menuitem>
+    </menu>
+
+    <!-- <meter>: Representa una medida escalar dentro de un rango conocido -->
+    <meter value="2" min="0" max="10">2 out of 10</meter>
+
+    <!-- <nav>: Define un conjunto de enlaces de navegación -->
+    <nav>
+      <a href="#home">Inicio</a> | <a href="#news">Noticias</a> |
+      <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- <nobr>: Obsoleto, previene el quiebre de línea -->
+    <!-- Ejemplo: <nobr>Texto sin quiebre de línea</nobr> -->
+
+    <!-- <noembed>: Obsoleto, proporcionaba contenido alternativo para navegadores que no soportaban <embed> -->
+    <!-- Ejemplo: <embed><noembed>Contenido alternativo</noembed></embed> -->
+
+    <!-- <noframes>: Obsoleto, proporcionaba contenido alternativo para navegadores que no soportaban <frames> -->
+    <!-- Ejemplo: <frameset><noframes>Contenido alternativo</noframes></frameset> -->
+
+    <!-- <noscript>: Define un contenido alternativo para usuarios con JavaScript deshabilitado -->
+    <noscript>JavaScript no está habilitado en tu navegador.</noscript>
+
+    <!-- <object>: Define un objeto incrustado -->
+    <object data="movie.swf" width="400" height="300"></object>
+
+    <!-- <ol>: Define una lista ordenada -->
+    <ol>
+      <li>Primer ítem</li>
+      <li>Segundo ítem</li>
+    </ol>
+
+    <!-- <optgroup>: Agrupa opciones relacionadas dentro de un <select> -->
+    <select>
+      <optgroup label="Frutas">
+        <option>Manzana</option>
+        <option>Naranja</option>
+      </optgroup>
+    </select>
+
+    <!-- <option>: Define una opción en un <select> -->
+    <select>
+      <option>Manzana</option>
+      <option>Naranja</option>
+    </select>
+
+    <!-- <output>: Representa el resultado de un cálculo -->
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+      <input type="range" id="a" value="50" /> +
+      <input type="number" id="b" value="50" />
+      <output name="result" for="a b">100</output>
+    </form>
+
+    <!-- <p>: Define un párrafo -->
+    <p>Este es un párrafo.</p>
+
+    <!-- <param>: Obsoleto, definía parámetros para <object> -->
+    <!-- Ejemplo: <object><param name="autoplay" value="true"></object> -->
+
+    <!-- <picture>: Define contenedores para múltiples imágenes -->
+    <picture>
+      <source media="(min-width: 650px)" srcset="imagen_grande.jpg" />
+      <source media="(min-width: 465px)" srcset="imagen_mediana.jpg" />
+      <img src="imagen_pequeña.jpg" alt="Una imagen" />
+    </picture>
+
+    <!-- <plaintext>: Obsoleto, renderizaba texto como está -->
+    <!-- Ejemplo: <plaintext>Texto plano</plaintext> -->
+
+    <!-- <portal>: Experimental, un nuevo tipo de elemento HTML para navegar entre páginas -->
+    <!-- Ejemplo: <portal src="https://www.ejemplo.com"></portal> -->
+
+    <!-- <pre>: Define texto preformateado -->
+    <pre>
+    Texto preformateado
+        con espacios
+    y saltos de línea.
+    </pre>
+
+    <!-- <progress>: Representa el progreso de una tarea -->
+    <progress value="32" max="100">32%</progress>
+
+    <!-- <q>: Define una cita corta -->
+    <p>Steve Jobs dijo: <q>Stay hungry, stay foolish.</q></p>
+
+    <!-- <rb>, <rtc>: Obsoletos, relacionados con la anotación Ruby -->
+    <!-- Ejemplo: <ruby><rb>漢</rb><rt>かん</rt></ruby> -->
+
+    <!-- <rp>: Define qué mostrar en navegadores que no soportan anotaciones Ruby -->
+    <ruby>漢<rp>(</rp><rt>Kan</rt><rp>)</rp></ruby>
+
+    <!-- <rt>: Define una explicación/pronunciación de caracteres (para tipografía del Este Asiático) -->
+    <ruby>漢<rt>Kan</rt></ruby>
+
+    <!-- <ruby>: Define una anotación Ruby -->
+    <ruby>漢<rt>Kan</rt></ruby>
+
+    <!-- <s>: Define texto que no es ya correcto o relevante -->
+    <s>Precio anterior: $199.99</s> Precio actual: $149.99
+
+    <!-- <samp>: Define una muestra de salida de un programa de computadora -->
+    <samp>Resultado de la operación: 12</samp>
+
+    <!-- <script>: Define un script del lado del cliente -->
+    <script>
+      console.log("Hola mundo!"); 
+    </script>
+
+    <!-- <search>: No es una etiqueta estándar, podría referirse a <input type="search"> -->
+    <input type="search" name="q" placeholder="Buscar..." />
+
+    <!-- <section>: Define una sección en un documento -->
+    <section>
+      <h2>Título de la sección</h2>
+      <p>Contenido de la sección.</p>
+    </section>
+
+    <!-- <select>: Define un control de selección (lista desplegable) -->
+    <select>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </select>
+
+    <!-- <slot>: Parte de la tecnología Web Components, define un lugar de sustitución en un template -->
+    <slot name="nombre-slot">Contenido predeterminado</slot>
+
+    <!-- <small>: Define texto pequeño -->
+    <small>Texto en tamaño pequeño</small>
+
+    <!-- <source>: Especifica recursos de medios múltiples para <picture>, <audio> o <video> -->
+    <video controls>
+      <source src="movie.mp4" type="video/mp4" />
+      <source src="movie.ogg" type="video/ogg" />
+      Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+
+    <!-- <span>: Define un grupo en línea para aplicar estilo o agrupar -->
+    <span style="color: blue">Texto azul</span>
+
+    <!-- <strike>: Obsoleto, define texto tachado -->
+    <!-- Ejemplo: <strike>Texto tachado</strike> -->
+
+    <!-- <strong>: Define texto con importancia -->
+    <strong>Texto importante</strong>
+
+    <!-- <style>: Define estilo para un documento -->
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+    </style>
+
+    <!-- <sub>: Define texto subíndice -->
+    H<sub>2</sub>O
+
+    <!-- <summary>: Define un encabezado visible para un elemento <details> -->
+    <details>
+      <summary>Más información</summary>
+      Aquí hay detalles adicionales que puedes ver.
+    </details>
+
+    <!-- <sup>: Define texto superíndice -->
+    E=mc<sup>2</sup>
+
+    <!-- <table>: Define una tabla -->
+    <table border="1">
+      <tr>
+        <th>Encabezado</th>
+        <td>Dato</td>
+      </tr>
+    </table>
+
+    <!-- <tbody>: Agrupa el cuerpo del contenido en una tabla -->
+    <table border="1">
+      <tbody>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <td>: Define una celda en una tabla -->
+    <table border="1">
+      <tr>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+      </tr>
+    </table>
+
+    <!-- <template>: Contiene contenido HTML que no se muestra al cargar la página pero puede ser instanciado posteriormente via JavaScript -->
+    <template>
+      <p>Esto es un párrafo en un template.</p>
+    </template>
+
+    <!-- <textarea>: Define un área de texto multilínea -->
+    <textarea name="mensaje" rows="10" cols="30">
+Escribe tu mensaje aquí.</textarea
+    >
+
+    <!-- <tfoot>: Agrupa el pie del contenido en una tabla -->
+    <table border="1">
+      <tfoot>
+        <tr>
+          <td>Pie de página 1</td>
+          <td>Pie de página 2</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- <th>: Define una celda de encabezado en una tabla -->
+    <table border="1">
+      <tr>
+        <th>Encabezado 1</th>
+        <th>Encabezado 2</th>
+      </tr>
+    </table>
+
+    <!-- <thead>: Agrupa el contenido del encabezado en una tabla -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Encabezado 1</th>
+          <th>Encabezado 2</th>
+        </tr>
+      </thead>
+    </table>
+
+    <!-- <time>: Define una fecha/hora específica -->
+    <time datetime="2024-01-01">1 de enero de 2024</time>
+
+    <!-- <title>: Define el título del documento -->
+    <title>Título de la Página</title>
+
+    <!-- <tr>: Define una fila en una tabla -->
+    <table border="1">
+      <tr>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+      </tr>
+    </table>
+
+    <!-- <track>: Define pistas de texto para elementos <audio> o <video> -->
+    <video controls>
+      <source src="movie.mp4" type="video/mp4" />
+      <track
+        src="subtitulo_es.vtt"
+        kind="subtitles"
+        srclang="es"
+        label="Español"
+      />
+    </video>
+
+    <!-- <tt>: Obsoleto, definía texto en tipografía teletipo o monoespaciado -->
+    <!-- Ejemplo: <tt>Texto en tipografía teletipo</tt> -->
+
+    <!-- <u>: Define texto subrayado -->
+    <u>Texto subrayado</u>
+
+    <!-- <ul>: Define una lista desordenada -->
+    <ul>
+      <li>Ítem 1</li>
+      <li>Ítem 2</li>
+    </ul>
+
+    <!-- <var>: Define una variable en una expresión matemática o en un contexto de programación -->
+    <p>La ecuación es <var>x</var> = <var>y</var> + 2.</p>
+
+    <!-- <video>: Inserta un video -->
+    <video width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4" />
+      Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+
+    <!-- <wbr>: Define un punto de quiebre opcional -->
+    <p>Un <wbr />largo<wbr />nombre<wbr />de<wbr />dominio<wbr />.com</p>
+
+    <!-- <xmp>: Obsoleto, renderizaba texto tal cual está, similar a <pre> -->
+    <!-- Ejemplo: <xmp>Texto preformateado</xmp> -->
+  </body>
+</html>
