@@ -21,7 +21,6 @@
         margin: 0 auto 20px;
         width: 100px;
         border-radius: 100px;
-        
       }
     </style>
   </head>
@@ -44,20 +43,27 @@
       const pauseResumeButton = document.getElementById("pauseResumeButton");
       const stopButton = document.getElementById("stopButton");
 
-      startButton.addEventListener("click", () => {
-        navigator.mediaDevices
-          .getDisplayMedia({ video: true })
-          .then((stream) => {
-            mediaRecorder = new MediaRecorder(stream);
-            mediaRecorder.ondataavailable = handleDataAvailable;
-            mediaRecorder.onstop = handleStop;
-            mediaRecorder.start();
-            startButton.disabled = true;
-            pauseResumeButton.disabled = false;
-            stopButton.disabled = false;
-          })
-          .catch(console.error);
+      startButton.addEventListener("click", async () => {
+        try {
+          const screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+          const micStream = await navigator.mediaDevices.getUserMedia({ audio: true }); 
+          const combinedStream = new MediaStream([...screenStream.getTracks(), ...micStream.getTracks()]);
+          
+          handleStream(combinedStream);
+        } catch (e) {
+          console.error('Error: ', e);
+        }
       });
+
+      function handleStream(stream) {
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = handleDataAvailable;
+        mediaRecorder.onstop = handleStop;
+        mediaRecorder.start();
+        startButton.disabled = true;
+        pauseResumeButton.disabled = false;
+        stopButton.disabled = false;
+      }
 
       pauseResumeButton.addEventListener("click", () => {
         if (mediaRecorder.state === "recording") {
