@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo de CSS Transiciones y Animaciones</title>
+<style>
+    /* Estilos para la transición */
+    .transition-box {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        transition: width 2s, background-color 2s, transform 2s;
+    }
+
+    .transition-box:hover {
+        width: 200px;
+        background-color: red;
+        transform: rotate(180deg);
+    }
+
+    /* Estilos para la animación */
+    @keyframes example-animation {
+        0%   {background-color: red; left: 0px; top: 0px;}
+        25%  {background-color: yellow; left: 200px; top: 0px;}
+        50%  {background-color: blue; left: 200px; top: 200px;}
+        75%  {background-color: green; left: 0px; top: 200px;}
+        100% {background-color: red; left: 0px; top: 0px;}
+    }
+
+    .animation-box {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example-animation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+</style>
+</head>
+<body>
+    <h1>CSS Transiciones y Animaciones</h1>
+    <div class="transition-box"></div>
+    <br>
+    <div class="animation-box"></div>
+</body>
+</html>
